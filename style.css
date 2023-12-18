@@ -97,19 +97,21 @@ body {
 /* -------------------------------- */
 
 .portfolio {
-  margin: 0 100px 800px 0;
-  height: 100vh;
-  padding: 0 200px;
   font-size: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 150px;
 }
 
 .portfolio__item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   column-gap: 100px;
+  width: 1000px;
 }
 
 .portfolio img {
@@ -128,4 +130,27 @@ body {
 footer {
   height: 250px;
   background-image: url("src/Wave.svg");
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  .portfolio_desc {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .notes-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .note-search input {
+    min-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .notes-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
